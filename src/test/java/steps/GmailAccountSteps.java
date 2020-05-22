@@ -43,7 +43,7 @@ public void verify_user_is_successfully_logged_in() throws Throwable {
 String actualtitle = driver.getTitle();
 if(actualtitle.contains("rkumar.gctece")) 
 {
-System.out.println("User Logged in successfully");}
+System.out.println("Yes, User Logged in successfully");}
 else {
 	System.out.println("No, User failed to Log in");
 }
