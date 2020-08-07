@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "7b9bad0b-8614-4eb6-a245-bcdfa9b499f0",
+		"name": "NYT APIs",
+		"description": "New York Times APIs for testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BOOKS API New York Times",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4475bee-8154-48c9-bf42-3bfc82e4bdd7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/svc/books/v3/lists.json?api-key=HAE6PjpDZlKz4ZdBwfMrFniohO99Z3BV&list=hardcover-fiction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"svc",
+						"books",
+						"v3",
+						"lists.json"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "HAE6PjpDZlKz4ZdBwfMrFniohO99Z3BV"
+						},
+						{
+							"key": "list",
+							"value": "hardcover-fiction"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
